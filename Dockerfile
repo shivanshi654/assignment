@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM node:19.5.0-alpine
 RUN apt-get update && \
     apt-get upgrade -y
 RUN apt install nodejs -y && \
