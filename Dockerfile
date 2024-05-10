@@ -1,4 +1,4 @@
-FROM node:19.5.0-alpine
+FROM ubuntu:latest
 RUN apt-get update && \
     apt-get upgrade -y
 RUN apt install nodejs -y && \
@@ -7,3 +7,4 @@ WORKDIR ./
 COPY index.js index.js ./
 RUN npm install
 EXPOSE 8080
+CMD ["npm","start"]
